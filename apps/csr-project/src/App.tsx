@@ -2,7 +2,7 @@ import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
-import { Button } from '@repo/ui/button';
+import { Button } from '@repo/ui';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -22,7 +22,11 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <Button appName='app' className='bg-red-300'>
+        <Button
+          appName='app'
+          className='bg-amber-300'
+          variants={{ variant: 'destructive', size: 'lg' }}
+        >
           dasdasdad
         </Button>
         <p>
