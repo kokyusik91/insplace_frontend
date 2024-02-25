@@ -2,7 +2,9 @@ import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
-import { Button } from '@repo/ui';
+
+import { Button, Card } from '@repo/ui/components';
+import { cn } from '@repo/ui/utils';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -24,7 +26,7 @@ function App() {
         </button>
         <Button
           appName='app'
-          className='bg-amber-300'
+          className='bg-red-300'
           variants={{ variant: 'destructive', size: 'lg' }}
         >
           dasdasdad
