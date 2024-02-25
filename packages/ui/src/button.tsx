@@ -1,6 +1,7 @@
-"use client";
+'use client';
 
-import { ReactNode } from "react";
+import '@repo/tailwind-config/style.css';
+import { ReactNode } from 'react';
 
 interface ButtonProps {
   children: ReactNode;
