@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import { Card } from '@repo/ui/card';
-import { Code } from '@repo/ui/code';
+
 import styles from './page.module.css';
-import { Button } from '@repo/ui/button';
+
+import { Card, Code, Button } from '@repo/ui/components';
 
 function Gradient({
   conic,
@@ -78,7 +78,11 @@ export default function Page(): JSX.Element {
         </div>
       </div>
 
-      <Button className='bg-zinc-100' appName='web'>
+      <Button
+        className='bg-zinc-100'
+        appName='web'
+        variants={{ variant: 'secondary', size: 'icon' }}
+      >
         Click me!
       </Button>
       <div className='bg-zinc-300'>click me!!@!@!@!</div>
