@@ -10,18 +10,20 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@repo/ui": "*",
+    "@tanstack/react-query": "^5.24.1",
+    "kofetch": "^1.0.6",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "@repo/ui": "*"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/tailwind-config": "*",
+    "@repo/typescript-config": "*",
     "@types/react": "^18.2.56",
     "@types/react-dom": "^18.2.19",
     "@typescript-eslint/eslint-plugin": "^7.0.2",
     "@typescript-eslint/parser": "^7.0.2",
-    "@repo/eslint-config": "*",
-    "@repo/tailwind-config": "*",
-    "@repo/typescript-config": "*",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "autoprefixer": "^10.4.17",
     "eslint": "^8.56.0",
