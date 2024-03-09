@@ -1,8 +1,9 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { RouterProvider } from 'react-router-dom';
+
+import router from '@router/index';
 
 import './App.css';
-import { RouterProvider } from 'react-router-dom';
-import router from './pages/Router';
 
 // 최상단 컴포넌트
 function App() {

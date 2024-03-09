@@ -1,6 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
-import Main from './Main';
-import Sub from './Sub';
+
+import Main from '@/pages/Main';
+import Sub from '@/pages/Sub';
 
 const router = createBrowserRouter([
   {
