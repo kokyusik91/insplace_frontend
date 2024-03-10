@@ -15,7 +15,7 @@ export function GlobalNavigation({
 
   return (
     <header
-      className={`h-[67px] bg-red-100 px-2 py-4 fixed top-0 right-0 ${TRANSITION_OPTION} ${expandable ? 'w-calc-width' : 'w-full'}`}
+      className={`h-[67px] bg-blue-100 px-2 py-4 fixed top-0 right-0 ${TRANSITION_OPTION} ${expandable ? 'w-calc-width' : 'w-full'}`}
     >
       <nav className='flex justify-between items-center'>
         {logo}

@@ -40,7 +40,7 @@ export function Placeitem({ place }: PlaceItemProps) {
   const image = place.images[0]?.imageUrl;
 
   return (
-    <li className='w-[290px]'>
+    <li className='w-[290px] hover:animate-bounce'>
       <a href=''>
         <div className='w-[290px] h-[275px] rounded-xl overflow-hidden mb-3'>
           <img
@@ -49,7 +49,7 @@ export function Placeitem({ place }: PlaceItemProps) {
               'https://a0.muscache.com/im/pictures/e01e839c-6047-4736-a432-10bd39aacdfd.jpg?im_w=720'
             }
             alt={place.title}
-            className='w-full h-full object-cover'
+            className='w-full h-full object-cover rounded-xl '
           />
         </div>
         <h1 className='font-semibold	text-zinc-700'>{place.title}</h1>
