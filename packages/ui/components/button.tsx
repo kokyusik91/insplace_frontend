@@ -39,21 +39,21 @@ const buttonVariants = cva(
 interface ButtonProps {
   children: ReactNode;
   className?: string;
-  appName: string;
   variants: VariantProps<typeof buttonVariants>;
+  onClick?: () => void;
 }
 
 export const Button = ({
   children,
   className,
-  appName,
   variants,
+  onClick,
 }: ButtonProps) => {
   const { variant, size } = variants;
   return (
     <button
       className={cn(buttonVariants({ variant, size, className }))}
-      onClick={() => alert(`Hello from your ${appName} app!`)}
+      onClick={onClick}
     >
       {children}
     </button>

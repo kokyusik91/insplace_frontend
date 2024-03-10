@@ -3,6 +3,6 @@
   "compilerOptions": {
     "outDir": "dist"
   },
-  "include": ["components", "utils"],
+  "include": ["components", "utils", "components/layout"],
   "exclude": ["node_modules", "dist"]
 }
