@@ -22,8 +22,6 @@ export default function CategoryButtonList({
       ),
   });
 
-  console.log(categories);
-
   return (
     <ul className='flex gap-6 my-5'>
       {categories?.map((item) => (
