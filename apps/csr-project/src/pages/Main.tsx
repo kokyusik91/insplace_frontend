@@ -8,12 +8,13 @@ import { GlobalNavigation, MainContents } from '@repo/ui/components/layout';
 import { useQuery } from '@tanstack/react-query';
 import { ChevronsLeft, Key, Sparkles, UserRound } from 'lucide-react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const SIDEBAR_WIDTH = 280;
 const TRANSITION_OPTION = 'transition-all ease-in-out duration-1000';
 
 function Main() {
+  const navigate = useNavigate();
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
   const [categoryId, setCategoryId] = useState(1);
 
@@ -26,8 +27,6 @@ function Main() {
     queryKey: ['weather'],
     queryFn: getTodaysWeather,
   });
-
-  console.log(todayWeather);
 
   const { data: hotPlaces } = useQuery({
     queryKey: ['places', 'hot'],
@@ -43,6 +42,10 @@ function Main() {
 
   const handleClickCategoryButton = (id: number) => {
     setCategoryId(id);
+  };
+
+  const navigateDetailPage = (id: number) => {
+    navigate(`/place/${id}`);
   };
 
   return (
@@ -111,7 +114,15 @@ function Main() {
             categoryId={categoryId}
           />
           <ul className='flex flex-wrap gap-12 '>
-            {places?.map((item) => <Placeitem key={item.id} place={item} />)}
+            {places?.map((item) => (
+              <Placeitem
+                key={item.id}
+                place={item}
+                handleClickCard={() => {
+                  navigateDetailPage(item.id);
+                }}
+              />
+            ))}
           </ul>
         </MainContents>
       </div>
