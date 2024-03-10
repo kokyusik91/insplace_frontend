@@ -27,7 +27,9 @@
       "@app/*": ["app/*"],
       "@pages/*": ["pages/*"],
       "@components/*": ["components/*"],
-      "@hooks/*": ["hooks/*"]
+      "@hooks/*": ["hooks/*"],
+      "@entities/*": ["entities/*"],
+      "@assets/*": ["assets/*"]
     }
   },
   "include": ["src"],

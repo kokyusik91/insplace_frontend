@@ -1,6 +1,6 @@
 import { Kofetch } from 'kofetch';
 
-const fetchInstance = Kofetch.create({
+export const fetchInstance = Kofetch.create({
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
