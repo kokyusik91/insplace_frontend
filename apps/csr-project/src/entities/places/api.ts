@@ -6,3 +6,6 @@ export const getAllPlaces = () =>
 
 export const getHotPlaces = () =>
   fetchInstance.get<PlaceModel[]>('http://localhost:3000/places/hot');
+
+export const getPlaceById = (id: number) =>
+  fetchInstance.get(`http://localhost:3000/places/${id}`);
