@@ -21,11 +21,17 @@ function Main() {
   const { data: places } = useQuery({
     queryKey: ['places', 'all'],
     queryFn: getAllPlaces,
+    refetchOnWindowFocus: false,
+    refetchOnMount: false,
+    refetchOnReconnect: false,
   });
 
   const { data: todayWeather } = useQuery({
     queryKey: ['weather'],
     queryFn: getTodaysWeather,
+    refetchOnWindowFocus: false,
+    refetchOnMount: false,
+    refetchOnReconnect: false,
   });
 
   const { data: hotPlaces } = useQuery({

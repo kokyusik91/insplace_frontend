@@ -20,6 +20,9 @@ export default function CategoryButtonList({
           ? { ...item, value: 'all', label: '전체' }
           : { ...item }
       ),
+    refetchOnWindowFocus: false,
+    refetchOnMount: false,
+    refetchOnReconnect: false,
   });
 
   return (
